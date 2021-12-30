@@ -1,0 +1,68 @@
+@import "/src/shared/ui/styles/var";
+
+.header {
+	background: #232422 !important;
+	height: 60px !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+
+	padding: 10px 60px;
+
+	@media (max-width: $md) {
+		padding: 10px 30px;
+	}
+
+	@media (max-width: $sm) {
+		z-index: 1001;
+		padding: 10px 40px;
+	}
+
+	@media (max-width: $xs) {
+		padding: 10px 20px;
+	}
+
+	&__side {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.menu {
+	margin-right: 20px;
+	@media (min-width: 1200px) {
+		display: none;
+	}
+
+	@media (max-width: 767px) {
+		margin-right: 30px;
+	}
+	color: #ffffff;
+}
+
+.logo {
+	display: flex;
+	margin-right: 30px;
+	color: #ffffff;
+}
+
+.mobile {
+	display: none;
+}
+
+.sub_title {
+	color: #ffffff;
+	font-weight: 500 !important;
+}
+
+@media (max-width: $sm) {
+	.mobile {
+		display: flex !important;
+	}
+	.desktop {
+		display: none !important;
+	}
+}

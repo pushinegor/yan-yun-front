@@ -1,0 +1,9 @@
+.ant-popconfirm {
+	span[role="img"] {
+		display: none;
+	}
+
+	.ant-popover-message-title {
+		padding-left: unset;
+	}
+}

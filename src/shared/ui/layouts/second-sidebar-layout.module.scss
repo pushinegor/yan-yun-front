@@ -1,0 +1,141 @@
+@import "/src/shared/ui/styles/var";
+
+.second_sidebar {
+	padding: 50px 30px;
+	position: fixed;
+	z-index: 60;
+	top: 60px;
+	left: 310px;
+	height: calc(100vh - 60px);
+	border-right: 1px solid #eef0f2;
+	overflow-y: scroll;
+
+	& > :global(.ant-layout-sider-children) > :global(.ant-btn) {
+		width: 100%;
+	}
+
+	:global .ant-menu {
+		border-right: 0;
+		margin-bottom: 35px;
+		margin-top: -5px;
+	}
+
+	:global .ant-menu-item {
+		height: 29px !important;
+		line-height: 29px !important;
+
+		color: #78838d;
+	}
+
+	:global .ant-menu-item-selected {
+		color: $text-color !important;
+	}
+
+	@media (min-width: 1440px) {
+		width: 360px !important;
+		max-width: 360px !important;
+	}
+}
+
+.content {
+	margin-left: 550px;
+	padding: 50px 0 0 40px !important;
+	max-width: none !important;
+	position: relative;
+	z-index: 50;
+
+	@media (min-width: 1440px) {
+		margin-left: 630px;
+		max-width: 960px !important;
+	}
+}
+
+.dropdown {
+	display: none;
+}
+
+.bottom {
+	display: block;
+	height: 30px;
+}
+
+@media (max-width: $md) {
+	.second_sidebar {
+		left: 0;
+	}
+
+	.content {
+		margin-left: 240px;
+	}
+}
+
+@media (max-width: $sm) {
+	.second_sidebar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw !important;
+		max-width: none !important;
+		z-index: 100;
+		padding: 130px 20px 80px;
+		border: none;
+		transition: transform 0.4s;
+		transform: translateY(-110%);
+
+		:global(.ant-layout-sider-children) {
+			height: auto;
+		}
+
+		h1 {
+			display: none;
+		}
+
+		&.visible_on_mobile {
+			transform: none;
+		}
+	}
+
+	.content {
+		margin: 0;
+		padding: 80px 0 0 !important;
+		width: 100% !important;
+		max-width: none !important;
+	}
+
+	.dropdown {
+		$parent: &;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #ffffff;
+		padding: 11px 40px;
+		position: fixed;
+		top: 60px;
+		left: 0;
+		width: 100vw;
+		z-index: 120;
+		cursor: pointer;
+		border-bottom: 1px solid $border-color;
+
+		&__title {
+			font-size: 20px !important;
+			margin: 0 !important;
+		}
+
+		&__arrow {
+			transition: 0.3s;
+
+			#{$parent}.active & {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+@media (max-width: $xs) {
+	.dropdown {
+		padding: 11px 20px;
+	}
+}

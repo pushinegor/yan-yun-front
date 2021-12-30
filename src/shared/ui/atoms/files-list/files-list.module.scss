@@ -1,0 +1,11 @@
+@import "/src/shared/ui/styles/var";
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.placeholder {
+	color: $light-text-color;
+}

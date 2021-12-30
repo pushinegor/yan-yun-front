@@ -1,0 +1,115 @@
+@import "/src/shared/ui/styles/var";
+
+.main_sidebar_wrapper {
+	padding-top: 60px;
+	position: fixed;
+	height: 100%;
+	z-index: 50;
+	background-color: $bg-color;
+	display: none;
+	color: $border-color;
+
+	@media (min-width: 1200px) {
+		display: flex;
+	}
+}
+
+.main_sidebar {
+	padding: 50px 40px 50px 60px;
+	background-color: $bg-color;
+
+	transition: none;
+
+	:global(.ant-layout-sider-children) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__drawer {
+		margin-left: 0;
+		max-width: 100vw !important;
+		width: 310px !important;
+		height: 100vh;
+	}
+
+	@media (max-width: $sm) {
+		&__drawer {
+			width: 100% !important;
+			padding: 80px 20px 20px;
+			height: auto;
+		}
+	}
+}
+
+.drawer {
+	:global(.ant-drawer-body) {
+		padding: 0;
+	}
+
+	@media (min-width: 1200px) {
+		display: none;
+	}
+
+	@media (max-width: $sm) {
+		display: none !important;
+	}
+}
+
+.mobile_drawer {
+	display: none !important;
+
+	@media (max-width: $sm) {
+		display: block !important;
+		width: 100vw !important;
+		max-width: none !important;
+
+		:global(.ant-drawer-content-wrapper) {
+			width: 100% !important;
+			height: auto !important;
+		}
+
+		:global(.ant-drawer-body) {
+			padding: 0 !important;
+		}
+	}
+}
+
+.mobile_sidebar_drawer {
+	background-color: $text-color;
+}
+
+.bottom_drawer {
+	@media (max-width: $sm) {
+		display: block !important;
+		width: 100vw !important;
+		max-width: none !important;
+
+		:global(.ant-drawer-content-wrapper) {
+			width: 100% !important;
+			height: auto !important;
+		}
+
+		:global(.ant-drawer-body) {
+			padding: 0 !important;
+		}
+	}
+
+	.main_sidebar__drawer {
+		@media (max-width: $sm) {
+			padding-top: 20px;
+		}
+	}
+}
+
+.content {
+	padding: 60px 40px;
+	background-color: $light-bg-color !important;
+
+	@media (max-width: $sm) {
+		width: 100% !important;
+	}
+
+	@media (max-width: $xs) {
+		padding: 50px 20px;
+	}
+}

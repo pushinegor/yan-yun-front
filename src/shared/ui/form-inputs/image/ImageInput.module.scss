@@ -1,0 +1,30 @@
+@import "/src/shared/ui/styles/var";
+
+.input_wrapper {
+	display: flex;
+}
+
+.buttons {
+	margin-left: 20px;
+
+	& > * {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	& > span {
+		display: block;
+	}
+}
+
+@media (max-width: $xs) {
+	.input_wrapper {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.buttons {
+		margin: 10px 0 0 0;
+	}
+}

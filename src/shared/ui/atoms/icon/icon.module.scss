@@ -1,0 +1,15 @@
+.icon_wrap {
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	line-height: 0;
+	//vertical-align: -0.125em;
+}
+
+.override_color {
+	svg,
+	path {
+		fill: currentColor;
+	}
+}

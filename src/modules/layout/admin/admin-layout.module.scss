@@ -1,0 +1,43 @@
+@import "/src/shared/ui/styles/var";
+
+.sidebar {
+	overflow-y: auto;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+
+	:global(.ant-menu-item) {
+		color: $light-text-color;
+
+		&:hover {
+			color: #ffffff;
+		}
+
+		&:global(.ant-menu-item-selected) {
+			color: #ffffff;
+		}
+	}
+
+	:global(.ant-menu) {
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.pressed_bottom {
+	margin-top: auto;
+	margin-bottom: 0 !important;
+}
+
+.list_title {
+	color: $light-text-color;
+	margin-bottom: 10px !important;
+	font-weight: 500 !important;
+}
+
+@media (max-width: $xs) {
+	.hide_on_mobile {
+		display: none;
+	}
+}

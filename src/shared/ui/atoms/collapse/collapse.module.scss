@@ -1,0 +1,58 @@
+@import "/src/shared/ui/styles/var";
+
+.collapse {
+	background-color: #fff;
+	border: $border;
+	border-radius: $radius;
+	transition: border-color $transition;
+
+	&:hover {
+		border-color: $secondary-color;
+	}
+
+	:global(.ant-collapse-item) {
+		border-bottom: none;
+	}
+
+	:global(.ant-collapse-header) {
+		padding: 10px !important;
+		padding-right: 40px !important;
+	}
+
+	:global(.ant-collapse-content-box) {
+		padding: 0 10px 10px !important;
+	}
+
+	:global(.ant-collapse-header) {
+		display: flex;
+		align-items: center;
+	}
+
+	:global(.ant-collapse-extra) {
+		order: -1;
+	}
+
+	:global(.ant-typography) {
+		margin-bottom: 0;
+	}
+
+	:global(.ant-collapse-arrow) {
+		right: 6px !important;
+		width: 30px;
+		top: 50% !important;
+		transform: translateY(-50%) !important;
+
+		:global(.app-icon) {
+			display: flex !important;
+			align-items: center !important;
+		}
+	}
+}
+
+.dropdown {
+	transition: transform $transition;
+
+	&.active {
+		transform: scale(1, -1);
+	}
+}

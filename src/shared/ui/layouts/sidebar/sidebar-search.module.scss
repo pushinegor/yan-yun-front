@@ -1,0 +1,39 @@
+@import "/src/shared/ui/styles/var";
+
+.sidebar_search {
+	margin-bottom: 10px;
+}
+
+.sidebar_search__label {
+	/* Medium/16-140 */
+
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 140%;
+	/* or 22px */
+
+	display: flex;
+	align-items: center;
+
+	/* Монохром / 6 */
+
+	color: #1f2831;
+
+	/* Inside Auto Layout */
+
+	margin: 10px 0 5px;
+}
+
+.button {
+	display: none !important;
+}
+
+@media (max-width: $sm) {
+	.button {
+		display: flex !important;
+		width: 100%;
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,91 @@
+@import "src/shared/ui/styles/var";
+
+.sidebar_filter {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	overflow-y: hidden;
+
+	:global .ant-badge {
+		margin-left: 5px;
+	}
+}
+
+.sidebar_filter__label {
+	font-family: "montserrat", san-serif;
+	font-style: normal;
+	font-weight: 700 !important;
+	font-size: 20px;
+	line-height: 140%;
+
+	display: flex;
+	align-items: center;
+
+	color: $text-color;
+
+	/* Inside Auto Layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 10px 0;
+}
+
+.sidebar_filter__item {
+	font-weight: 500 !important;
+	white-space: normal !important;
+	text-align: left;
+	line-height: 1.6 !important;
+	align-items: flex-start !important;
+	justify-content: flex-start !important;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 4px 0 !important;
+	position: relative;
+	left: 0;
+
+	&:before {
+		content: "";
+		width: 0;
+		height: 20px;
+		display: block;
+		background-color: $secondary-color;
+		margin-right: 5px;
+		position: absolute;
+		left: -8px;
+		top: 6px;
+		transition: 0.1s;
+		opacity: 1;
+		border-radius: 0 !important;
+	}
+
+	&:first-child {
+		padding-top: 0 !important;
+
+		&:before {
+			top: 1px;
+		}
+	}
+
+	& > div {
+		width: 100%;
+	}
+
+	span {
+		display: block;
+	}
+
+	&__active {
+		font-weight: 700;
+		padding-left: 8px !important;
+		//left: 8px;
+
+		&:before {
+			width: 3px;
+			left: 0;
+		}
+	}
+}
+
+.badge {
+	color: inherit;
+}

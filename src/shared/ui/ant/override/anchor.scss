@@ -1,0 +1,90 @@
+@import "/src/shared/ui/styles/var";
+
+.ant-anchor-wrapper {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+.ant-anchor-ink {
+	display: none !important;
+}
+
+.ant-anchor {
+	padding-left: 0 !important;
+}
+
+.ant-anchor-ink-ball {
+	display: none;
+}
+
+.ant-anchor-link {
+	//padding-left: 0 !important;
+	font-weight: 300 !important;
+	display: flex;
+	align-items: flex-start;
+	height: auto !important;
+	line-height: 21px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	position: relative;
+	left: 0;
+	transition: $transition;
+
+	&:nth-child(2) {
+		.ant-anchor-link-title {
+			padding-top: 0 !important;
+		}
+
+		&:before {
+			top: 0;
+		}
+	}
+
+	&:last-child {
+		.ant-anchor-link-title {
+			padding-bottom: 0 !important;
+		}
+	}
+
+	&-title {
+		color: $light-text-color !important;
+		white-space: normal !important;
+		padding: 4px 0 !important;
+
+		&-active {
+			color: $text-color !important;
+			font-weight: 700;
+		}
+	}
+
+	&:before {
+		content: "";
+		width: 0;
+		height: 20px;
+		display: block;
+		background-color: $primary-color;
+		flex-shrink: 0;
+		position: absolute;
+		left: -8px;
+		transition: 0.1s;
+		top: 5px;
+		border-radius: 0 !important;
+	}
+
+	&-active {
+		left: 8px;
+		&:before {
+			width: 3px;
+		}
+	}
+
+	&:hover {
+		.ant-anchor-link-title {
+			color: $secondary-color !important;
+		}
+	}
+}
+
+.ant-anchor-link-title {
+	font-weight: 300;
+}

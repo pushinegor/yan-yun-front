@@ -1,0 +1,22 @@
+@import "/src/shared/ui/styles/var";
+
+.menu {
+	display: none;
+	margin-bottom: 0 !important;
+
+	:global(.ant-menu-item) {
+		color: $border-color;
+		line-height: 22px !important;
+		height: auto !important;
+
+		&:not(:last-child) {
+			margin-bottom: 20px !important;
+		}
+	}
+}
+
+@media (max-width: $sm) {
+	.menu {
+		display: block;
+	}
+}

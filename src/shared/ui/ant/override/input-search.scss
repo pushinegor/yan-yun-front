@@ -1,0 +1,31 @@
+.ant-input-search-with-button {
+	.ant-input-affix-wrapper {
+		height: 42px;
+		background: #eef0f2;
+
+		&:not(&-focused) {
+			border-color: #eef0f2;
+		}
+
+		&-focused {
+			box-shadow: none;
+		}
+
+		input {
+			background: transparent;
+		}
+	}
+
+	button.ant-btn {
+		padding: 0 12px;
+	}
+
+	button.ant-btn > span {
+		display: flex;
+		align-items: center;
+
+		.app-icon {
+			margin-left: 6px;
+		}
+	}
+}

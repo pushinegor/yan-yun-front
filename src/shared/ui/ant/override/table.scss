@@ -1,0 +1,31 @@
+@import "/src/shared/ui/styles/var";
+
+.ant-table {
+	border-radius: $radius !important;
+	box-shadow: $shadow;
+	overflow: hidden;
+}
+
+.ant-table-thead {
+	.ant-table-cell {
+		font-weight: 500;
+	}
+
+	& > tr > th {
+		//background-color: $secondary-color !important;
+		//color: #ffffff !important;
+	}
+}
+
+.ant-table-tbody {
+	.ant-table-row:last-child {
+		.ant-table-cell {
+			border-bottom: none;
+		}
+	}
+}
+
+.ant-table-cell {
+	vertical-align: top;
+	font-weight: 300;
+}

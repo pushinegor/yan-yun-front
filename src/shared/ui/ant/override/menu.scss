@@ -1,0 +1,32 @@
+@import "/src/shared/ui/styles/var";
+
+.ant-menu {
+	background-color: transparent;
+	border-right: none;
+}
+
+ul .ant-menu {
+	overflow-y: hidden;
+}
+
+.ant-menu-item {
+	display: flex !important;
+	align-items: center;
+	font-weight: 500;
+	height: 42px !important;
+	line-height: 42px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	background: transparent !important;
+}
+
+.ant-menu-item-selected {
+	&:before {
+		content: "";
+		width: 3px;
+		height: 20px;
+		display: block;
+		background-color: $primary-color;
+		margin-right: 6px;
+	}
+}

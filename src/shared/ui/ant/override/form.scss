@@ -1,0 +1,72 @@
+@import "/src/shared/ui/styles/var";
+
+.ant-form-vertical {
+	.ant-form-item-label {
+		label {
+			font-weight: 700;
+			width: 100%;
+		}
+	}
+}
+
+.ant-form-item {
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.ant-form-item-label {
+	text-align: left;
+	font-weight: 700;
+
+	& > label {
+		text-align: left;
+		font-weight: 700;
+		height: auto;
+		margin-bottom: 5px;
+	}
+}
+
+.ant-radio-inner,
+.ant-checkbox-inner {
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	border-color: $text-color !important;
+
+	&:after {
+		background-color: transparent !important;
+		width: 10px !important;
+		height: 10px !important;
+		top: 50% !important;
+		left: 50% !important;
+		transform: translate(-50%, -50%) !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: url("/img/icons/check.svg");
+		background-size: contain;
+		background-position: center;
+		border: none !important;
+	}
+}
+
+.ant-radio-checked,
+.ant-checkbox-checked {
+	.ant-radio-inner,
+	.ant-checkbox-inner {
+		border-color: transparent !important;
+		background-color: $primary-color !important;
+	}
+}
+
+.ant-form-item-control-input {
+	min-height: 0 !important;
+}
+
+.ant-checkbox-inner {
+	border-radius: 0 !important;
+}
+
+.ant-checkbox-checked::after {
+	border-radius: 0 !important;
+}

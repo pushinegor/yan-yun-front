@@ -1,0 +1,14 @@
+@import "/src/shared/ui/styles/var";
+
+.text {
+	color: $light-text-color;
+
+	&:not(:last-child) {
+		margin-bottom: 5px;
+	}
+}
+
+.label {
+	font-weight: 700;
+	color: $text-color;
+}

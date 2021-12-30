@@ -1,0 +1,22 @@
+@import "/src/shared/ui/styles/var";
+
+.hr {
+	width: 100%;
+	height: 1px;
+	background-color: $light-text-color;
+	margin: 20px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: $xs) {
+	.hidden_xs {
+		display: none !important;
+	}
+}

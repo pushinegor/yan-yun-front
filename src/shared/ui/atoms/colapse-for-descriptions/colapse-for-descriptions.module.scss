@@ -1,0 +1,24 @@
+.sub_collapse {
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+
+	:global(.ant-collapse-content-box) {
+		padding: 0 !important;
+	}
+
+	:global(.ant-descriptions-item-content) {
+		width: 50% !important;
+	}
+
+	:global(.ant-descriptions-item-label) {
+		width: 50% !important;
+	}
+
+	:global(.ant-descriptions-bordered .ant-descriptions-view) {
+		border-radius: 0 0 5px 5px !important;
+		border-left: none !important;
+		border-right: none !important;
+		border-bottom: none !important;
+	}
+}

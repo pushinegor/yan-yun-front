@@ -1,0 +1,74 @@
+@import "/src/shared/ui/styles/var";
+.ant-btn {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	border-color: $border-color;
+	color: $text-color;
+
+	.app-icon {
+		height: 20px;
+
+		& + span {
+			margin-left: 5px;
+		}
+	}
+
+	span + .app-icon {
+		margin-left: 5px;
+	}
+
+	&.ant-btn-link {
+		display: block;
+		padding: 0;
+		height: 22px;
+		color: $text-color;
+		border-color: transparent;
+
+		&:hover {
+			color: $secondary-color !important;
+		}
+
+		.app-icon {
+			line-height: 1em;
+			vertical-align: -0.22em;
+		}
+	}
+
+	&.ant-btn-link + &.ant-btn-link {
+		margin-top: 10px;
+	}
+
+	&.ant-btn-primary {
+		color: #ffffff;
+		border: none;
+		background-color: $primary-color;
+
+		&:hover {
+			background-color: $secondary-color;
+		}
+	}
+}
+
+a.ant-btn {
+	display: inline-flex !important;
+}
+
+.ant-btn-link.ant-btn-icon-only {
+	color: #1f2831;
+
+	&:hover {
+		color: black;
+	}
+}
+
+.ant-btn-dangerous {
+	color: #ffffff;
+	background-color: $alert-color !important;
+	border-color: transparent !important;
+
+	&:hover {
+		background-color: #dd5000 !important;
+	}
+}

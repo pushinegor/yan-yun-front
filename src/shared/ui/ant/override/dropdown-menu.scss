@@ -1,0 +1,11 @@
+@import "/src/shared/ui/styles/var";
+
+.ant-dropdown-menu-title-content {
+	font-weight: 700;
+}
+
+.ant-dropdown-menu-item {
+	&:hover {
+		color: $secondary-color;
+	}
+}

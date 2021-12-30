@@ -1,0 +1,9 @@
+@import "/src/shared/ui/styles/var";
+
+.content {
+	@media (max-width: $xs) {
+		padding: 20px 10px 80px;
+		max-width: none;
+		width: 100%;
+	}
+}

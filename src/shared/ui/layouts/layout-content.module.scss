@@ -1,0 +1,16 @@
+@import "/src/shared/ui/styles/var";
+
+.content {
+	width: 100%;
+	max-width: 1270px;
+	padding: 50px 0 50px 360px;
+
+	@media (max-width: $md) {
+		padding-left: 0 !important;
+	}
+
+	&.big {
+		padding-left: 310px;
+		max-width: 1330px;
+	}
+}
